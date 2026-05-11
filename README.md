@@ -1,7 +1,7 @@
-# 🥑 Avocado Price Prediction & Type Classification
+#  Avocado Price Prediction & Type Classification
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project applies supervised machine learning and time series analysis to the Avocado dataset to answer two key business questions:
 
@@ -22,7 +22,7 @@ avocado-ml-project/
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 **Source:** Hass Avocado Board — weekly retail scan data  
 **Period:** 2015 – 2018  
@@ -40,7 +40,7 @@ avocado-ml-project/
 
 ---
 
-## 🔧 Tools & Libraries
+##  Tools & Libraries
 
 | Library | Purpose |
 |---------|---------|
@@ -85,8 +85,8 @@ avocado-ml-project/
 
 | Model | AIC/BIC | p-value | RMSE |
 |-------|---------|---------|------|
-| AR(1) | Lower ✅ | < 0.05 ✅ | **0.07** |
-| AR(2) | Higher | > 0.05 ❌ | Higher |
+| AR(1) | Lower  | < 0.05  | **0.07** |
+| AR(2) | Higher | > 0.05  | Higher |
 
 **Winner: AR(1) — Time Series outperformed all Linear Regression models with RMSE of 0.07 vs 0.255**
 
@@ -102,7 +102,7 @@ avocado-ml-project/
 
 | Metric | Train | Test |
 |--------|-------|------|
-| Accuracy | ~92% | **92%** ✅ |
+| Accuracy | ~92% | **92%** |
 
 > Test accuracy matches training accuracy → **no overfitting**, model generalises well.
 
@@ -126,39 +126,16 @@ avocado-ml-project/
 
 ---
 
-## 📈 Model Summary
+##  Model Summary
 
 | Task | Model | Result |
 |------|-------|--------|
 | Price Prediction | Linear Regression (Model 4) | Best R², RMSE = 0.255 |
-| Price Prediction | Time Series AR(1) | **RMSE = 0.07** ✅ (winner) |
-| Type Classification | Logistic Regression | **92% accuracy** ✅ (winner) |
+| Price Prediction | Time Series AR(1) | **RMSE = 0.07**  (winner) |
+| Type Classification | Logistic Regression | **92% accuracy**  (winner) |
 | Type Classification | PCA + Logistic Regression | Lower accuracy |
 
 ---
 
-## ▶️ How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/avocado-ml-project.git
-   cd avocado-ml-project
-   ```
-
-2. Install required libraries:
-   ```bash
-   pip install pandas numpy pyjanitor plotnine seaborn matplotlib scikit-learn statsmodels
-   ```
-
-3. Open the notebook:
-   ```bash
-   jupyter notebook Avocado_price_prediction_and_Type_Classification.ipynb
-   ```
-
-4. Run all cells: **Kernel → Restart & Run All**
-
-> ⚠️ Make sure `avocado.csv` is in the same folder as the notebook before running.
-
----
 
 *Built as part of the SheCodeAfrica Data Science Programme Mini Project*
