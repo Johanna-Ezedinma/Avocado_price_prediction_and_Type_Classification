@@ -10,7 +10,7 @@ This project applies supervised machine learning and time series analysis to the
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 avocado-ml-project/
@@ -54,7 +54,7 @@ avocado-ml-project/
 
 ---
 
-## 🗂️ Project Workflow
+## Project Workflow
 
 ### 1. Data Preparation
 - Cleaned column names with `pyjanitor`
@@ -116,11 +116,11 @@ avocado-ml-project/
 
 ---
 
-## 🏆 Key Findings
+## Key Findings
 
 - **Avocado prices are driven by type, region, seasonality, and supply level** — not any single factor
 - **Fall** consistently shows the highest and most variable average prices; **Winter** is cheapest
-- **Organic avocados** are reliably more expensive, but in high-demand regions or peak seasons, conventional prices can overlap — making them hard to distinguish even for a model
+- **Organic avocados** are reliably more expensive, but in high-demand regions or peak seasons, conventional prices can overlap, making them hard to distinguish even for a model
 - **Time series (AR1)** captured the temporal structure of price data far better than cross-sectional linear regression
 - **Wide-to-long reshaping** revealed hidden relationships between PLU codes, bag types, and pricing
 
