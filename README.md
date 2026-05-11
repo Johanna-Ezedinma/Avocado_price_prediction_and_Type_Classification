@@ -16,7 +16,7 @@ This project applies supervised machine learning and time series analysis to the
 avocado-ml-project/
 │
 ├── README.md                                               ← You are here
-├── Avocado_price_prediction_and_Type_Classification.ipynb  ← Main notebook (all cells run)
+├── Avocado_price_prediction_and_Type_Classification.ipynb  ← Jupyter notebook 
 └── avocado.csv                                             ← Dataset
 ```
 
@@ -72,9 +72,9 @@ avocado-ml-project/
 | Model | Features | R² | RMSE |
 |-------|----------|----|------|
 | Model 1 | `total_volume` only | 3.7% | ~0.39 |
-| Model 2 | `total_volume` + `season` | 9% | — |
-| Model 3 | + `type` | Significantly improved | — |
-| Model 4 (Best) | All features incl. `region`, `plu_code`, `bag_type` | Highest R² | **0.255** |
+| Model 2 | `total_volume` + `season` | 9% | ~38% |
+| Model 3 | + `type` | 47% | ~30% |
+| Model 4 (Best) | All features incl. `region`, `plu_code`, `bag_type` | ~60% | **~25%** |
 
 **Key insight:** Adding `type` (Organic vs Conventional) was the single biggest improvement. Region and seasonality also matter significantly.
 
@@ -94,7 +94,7 @@ avocado-ml-project/
 
 ### 3. Part 2 — Type Classification (Organic vs Conventional)
 
-#### Option A: Logistic Regression (Manual Feature Selection)
+#### Option A: Logistic Regression 
 
 - Features: `average_price`, `total_volume`, `season`, `region`
 - Target: `type_encoded` (Organic = 1, Conventional = 0)
@@ -112,7 +112,7 @@ avocado-ml-project/
 - Optimal components: **3** (capturing 72.5% of variance, per scree plot "elbow")
 - Top contributing features: avocado volume and average price
 
-**Winner: Logistic Regression (manual selection) — higher precision and accuracy than PCA approach**
+**Logistic Regression gave a higher precision and accuracy than the PCA approach**
 
 ---
 
@@ -122,7 +122,7 @@ avocado-ml-project/
 - **Fall** consistently shows the highest and most variable average prices; **Winter** is cheapest
 - **Organic avocados** are reliably more expensive, but in high-demand regions or peak seasons, conventional prices can overlap — making them hard to distinguish even for a model
 - **Time series (AR1)** captured the temporal structure of price data far better than cross-sectional linear regression
-- **Wide-to-long reshaping** was critical — it revealed hidden relationships between PLU codes, bag types, and pricing
+- **Wide-to-long reshaping** revealed hidden relationships between PLU codes, bag types, and pricing
 
 ---
 
@@ -161,4 +161,4 @@ avocado-ml-project/
 
 ---
 
-*Built as part of the SheCodeAfrica Data Science Programme — Module 12 Mini Project*
+*Built as part of the SheCodeAfrica Data Science Programme Mini Project*
