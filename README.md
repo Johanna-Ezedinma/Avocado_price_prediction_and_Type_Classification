@@ -8,41 +8,28 @@ This project applies supervised machine learning and time series analysis to the
 1. **Can we predict avocado prices?** — Using Linear Regression and Time Series (AR/ARIMA)
 2. **Can we classify avocado type?** — Distinguishing Organic from Conventional using Logistic Regression and PCA
 
----
-
-## Repository Structure
-
-```
-avocado-ml-project/
-│
-├── README.md                                               ← You are here
-├── Avocado_price_prediction_and_Type_Classification.ipynb  ← Jupyter notebook 
-└── avocado.csv                                             ← Dataset
-```
 
 ---
 
-##  Dataset
-
-**Source:** Hass Avocado Board — weekly retail scan data  
-**Period:** 2015 – 2018  
-**Key columns:**
+##  Dataset Description
 
 | Column | Description |
 |--------|-------------|
-| `Date` | Week of observation |
-| `AveragePrice` | Average retail price per avocado |
+| `Date` | Date of observation |
+| `AveragePrice` | Average price per avocado |
 | `Total Volume` | Total number of avocados sold |
 | `type` | Organic or Conventional |
-| `region` | US city/region |
-| `4046`, `4225`, `4770` | PLU code volumes |
+| ` PLU codes(4046`, `4225`, `4770)` | Different avocado categories
+| `Total Bags` | Total number of bags sold |
 | `Small/Large/XLarge Bags` | Bag size volumes |
+| `Region` | Sales region |
+| `Year` | Year of observation |
 
 ---
 
 ##  Tools & Libraries
 
-| Library | Purpose |
+|Library | Purpose |
 |---------|---------|
 | `pandas` | Data manipulation |
 | `pyjanitor` | Data cleaning & reshaping (`pivot_longer`) |
@@ -131,8 +118,8 @@ avocado-ml-project/
 | Task | Model | Result |
 |------|-------|--------|
 | Price Prediction | Linear Regression (Model 4) | Best R², RMSE = 0.255 |
-| Price Prediction | Time Series AR(1) | **RMSE = 0.07**  (winner) |
-| Type Classification | Logistic Regression | **92% accuracy**  (winner) |
+| Price Prediction | Time Series AR(1) | **RMSE = 0.07** |
+| Type Classification | Logistic Regression | **92% accuracy**  |
 | Type Classification | PCA + Logistic Regression | Lower accuracy |
 
 ---
